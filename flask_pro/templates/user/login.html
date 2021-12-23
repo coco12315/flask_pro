@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理系统</title>
+    <style type="text/css">
+        .text {
+            color:green;
+            font-size:120px;
+        }
+    </style>
+</head>
+<body>
+<h3>登录</h3>
+<a href="{{ url_for('admin.home') }}">返回</a>
+<form method="post">
+    <table align="left">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <tr>
+        <td>{{form.name.label}}</td>
+        <td>{{form.name}}</td>
+        <td>{{form.name.errors[0]}}</td>
+    </tr>
+        <tr>
+        <td>{{form.pwd.label}}</td>
+        <td>{{form.pwd}}</td>
+        <td>{{form.pwd.errors[0]}}</td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="提交"/></td>
+        <td><span style="color: #ff0000; ">{{ get_flashed_messages()[0] }}</span></td>
+    </tr>
+    </table>
+</form>
+</body>
+</html>

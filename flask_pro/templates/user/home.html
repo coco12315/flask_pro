@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理系统</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style type="text/css">
+        .text {
+            color:green;
+            font-size:120px;
+        }
+    </style>
+</head>
+<body>
+<h3>主页</h3>
+<p>'Hello! '{{ get_flashed_messages()[0] }}</p><br>
+<a href="{{ url_for('admin.login') }}">登录</a>
+<a href="{{ url_for('admin.register') }}">注册</a>
+<a href="{{ url_for('admin.logout') }}">退出</a>
+</body>
+</html>

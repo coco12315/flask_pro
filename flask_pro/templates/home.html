@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理系统</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    {{ moment.include_moment(local_js=url_for('static', filename='js/moment-with-locales.min.js')) }}
+    {{ moment.locale(auto_detect=True) }}
+    <style type="text/css">
+        .text {
+            color:green;
+            font-size:120px;
+        }
+    </style>
+</head>
+<body>
+<h3>主页</h3>
+<p>Hello! {{ current_user.username or 'Human' }}</p>
+<a href="{{ url_for('admin.register') }}">注册</a>
+{% if current_user.is_authenticated %}
+    <a href="{{ url_for('admin.detail') }}">查询</a>
+    <a href="{{ url_for('admin.logout') }}">退出</a>
+{% else %}
+    <a href="{{ url_for('admin.login') }}">登录</a>
+{% endif %}
+<p><<<{{ moment(current_time).format('LLLL') }}>>></p>
+<p>{{ moment(current_time).fromNow(refresh=True) }}</p>
+
+</body>
+</html>

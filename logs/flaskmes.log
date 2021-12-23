@@ -1,0 +1,44 @@
+2021-12-23 20:48:52,414 - flask_pro - INFO - This is an customer info message
+2021-12-23 20:50:16,160 - flask_pro - INFO - This is an customer info message
+2021-12-23 20:50:34,656 - flask_pro - INFO - This is an customer info message
+2021-12-23 20:52:35,724 - flask_pro - INFO - This is an customer info message
+2021-12-23 20:58:05,754 - flask_pro - WARNING - Flask Start
+2021-12-23 20:59:51,240 - flask_pro - WARNING - Flask Start
+2021-12-23 20:59:53,965 - flask_pro - ERROR - Exception on /admin/register [GET]
+Traceback (most recent call last):
+  File "e:\python\flask_mes\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\python\flask_mes\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\python\flask_mes\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\python\flask_mes\venv\lib\site-packages\flask_debugtoolbar\__init__.py", line 125, in dispatch_request
+    return view_func(**req.view_args)
+  File "C:\Python37\lib\cProfile.py", line 109, in runcall
+    return func(*args, **kw)
+  File "E:\python\flask_mes\flask_pro\views\admin.py", line 49, in register
+    return render_template('admin/register.html', form=form)
+  File "e:\python\flask_mes\venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    ctx.app,
+  File "e:\python\flask_mes\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "e:\python\flask_mes\venv\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "e:\python\flask_mes\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "E:\python\flask_mes\flask_pro\templates\admin\register.html", line 15, in top-level template code
+    <a href="{{ url_for('homes') }}">·µ»Ø</a>
+  File "e:\python\flask_mes\venv\lib\site-packages\flask\helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "e:\python\flask_mes\venv\lib\site-packages\flask\helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "e:\python\flask_mes\venv\lib\site-packages\werkzeug\routing.py", line 2314, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'homes'. Did you mean 'home' instead?
+2021-12-23 21:31:06,666 - flask_pro - WARNING - Flask Start
+2021-12-23 21:31:44,198 - flask_pro - INFO - Flask Start
+2021-12-23 21:32:34,435 - flask_pro - INFO - Flask Start
+2021-12-23 21:33:13,073 - flask_pro - INFO - Flask Start
+2021-12-23 21:34:41,610 - flask_pro - INFO - Flask Start
+2021-12-23 21:44:59,092 - flask_pro - INFO - Flask Start
+2021-12-23 21:49:43,041 - flask_pro - INFO - Flask Start

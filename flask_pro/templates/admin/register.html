@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理系统</title>
+    <style type="text/css">
+        .text {
+            color:green;
+            font-size:120px;
+        }
+    </style>
+</head>
+<body>
+<h3>用户注册</h3>
+<a href="{{ url_for('home') }}">返回</a>
+<form method="post">
+    <table align="left">
+    <tr>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <td>{{form.name.label}}</td>
+        <td>{{form.name}}</td>
+        <td>{{form.name.errors[0]}}</td>
+    </tr>
+        <tr>
+        <td>{{form.pwd.label}}</td>
+        <td>{{form.pwd}}</td>
+        <td>{{form.pwd.errors[0]}}</td>
+    </tr>
+    </tr>
+        <tr>
+        <td>{{form.repwd.label}}</td>
+        <td>{{form.repwd}}</td>
+        <td>{{form.repwd.errors[0]}}</td>
+    </tr>
+    </tr>
+        <tr>
+        <td>{{form.phone.label}}</td>
+        <td>{{form.phone}}</td>
+        <td>{{form.phone.errors[0]}}</td>
+    </tr>
+    </tr>
+        <tr>
+        <td>{{form.email.label}}</td>
+        <td>{{form.email}}</td>
+        <td>{{form.email.errors[0]}}</td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="注册"/></td>
+        <td><span style="color: red; ">{{ get_flashed_messages()[0] }}</span></td>
+    </tr>
+    </table>
+</form>
+</body>
+</html>

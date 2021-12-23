@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理系统</title>
+    <style type="text/css">
+        .text {
+            color:green;
+            font-size:120px;
+        }
+    </style>
+</head>
+<body>
+<h3>登录成功</h3>
+<a href="{{ url_for('home') }}">返回</a>
+<p>Hello! {{ current_user.username or 'Human' }} {{ get_flashed_messages()[0] }}</p>
+<form method="post">
+    <table align="left">
+    <tr>
+        <td width="150">{{'条码'}}</td>
+        <td width="150">{{'代码'}}</td>
+        <td width="150">{{'数量'}}</td>
+        <td width="150">{{'地址'}}</td>
+        <td width="150">{{'名称'}}</td>
+    </tr>
+        <tr>
+             <td>{{form['sn']}}</td>
+             <td>{{form['itemcode']}}</td>
+             <td>{{form['num']}}</td>
+             <td>{{form['addr']}}</td>
+             <td>{{form['name']}}</td>
+    </tr>
+    <tr>
+        <td><input type="button" value="管理"/></td>
+    </tr>
+    </table>
+</form>
+</body>
+</html>
